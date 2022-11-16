@@ -1,0 +1,55 @@
+{%  extends 'template_nav.html' %}
+{%  block content %}
+<div class="container">
+    <h1>Vista de detalle</h1>
+    <form class="needs-validation" action="{{ url_for('list') }}">
+        <div class="row g-3">
+            <div class="col-sm-6">
+                <label for="firstName" class="form-label">Campo 1</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <small class="text-muted">Lorem ipsum dolor sit amet</small>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="lastName" class="form-label">Campo 2</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                <small class="text-muted">Lorem ipsum dolor sit amet</small>
+            </div>
+
+            <div class="col-12">
+                <label for="address2" class="form-label">Campo 3 <span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+            </div>
+
+            <div class="col-md-5">
+                <label for="country" class="form-label">Tipo de usuario</label>
+                <select class="form-select" id="country" required="">
+                    <option value="">Seleccione...</option>
+                    <option>Administrador</option>
+                    <option>Usuario</option>
+                </select>
+                <small class="text-muted">Lorem ipsum dolor sit amet</small>
+            </div>
+
+            <div class="col-md-4">
+                <label for="state" class="form-label">Desplegable</label>
+                <select class="form-select" id="state" required="">
+                    <option value="">Seleccione...</option>
+                    <option>Opción 1</option>
+                    <option>Opción 2</option>
+                    <option>Opción 3</option>
+                </select>
+                <small class="text-muted">Lorem ipsum dolor sit amet</small>
+            </div>
+
+            <div class="col-md-3">
+                <label for="zip" class="form-label">Campo 4</label>
+                <input type="text" class="form-control" id="zip" placeholder="">
+                <small class="text-muted">Lorem ipsum dolor sit amet</small>
+            </div>
+        </div>
+
+        <button class="w-100 btn btn-primary btn-lg mt-4" type="submit">Guardar</button>
+    </form>
+</div>
+{%  endblock %}
